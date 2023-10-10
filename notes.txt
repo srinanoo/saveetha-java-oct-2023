@@ -1,0 +1,45 @@
+Rendering
+Parsing
+Compiling
+
+Types of Languages?
+    - Programming
+    - Scripting
+        Types?
+            - Client
+                - javascript
+                - typescript
+                - reactjs
+            - Server
+                - nodejs
+                - jsp
+                - asp
+                    - asp.net
+    - Markup
+
+Basic Coding Standards:
+    - Organising the Folder Structure
+        - Website
+            root folder
+                - *.html
+                - css/
+                    *.css
+                - js/
+                    *.js
+                - images/
+                    *.jpg, *.png
+    - Naming Conventions
+        - meaningful names
+            - cases (6 types)
+                - uppercase
+                    SAVEETHA COLLEGE
+                - lowercase
+                    saveethacollege
+                - lower camelcase
+                    saveethaCollege
+                - upper camelcase
+                    SaveethaCollege
+                - dash
+                    saveetha-college
+                - snakecase
+                    saveetha_college

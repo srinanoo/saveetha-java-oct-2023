@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1">
+        Div Container
+    </div>
+    <div id="div2">
+        Div <strong>Container</strong> goes here...
+    </div>
+
+    <br><br>
+
+    <div id="div3"></div>
+
+    <main id="main"></main>
+    <!-- <input type="button" value="Button"> -->
+
+    <button id="btnClick" onclick="process();">Click</button>
+
+    <script>
+        function process() {
+            console.log("Processing...");
+
+            // let div1 = document.getElementById("div1").innerText;
+            // console.log(div1);
+
+            // let div2 = document.getElementById("div2").innerText;
+            // console.log(div2);
+
+            // let div3 = document.getElementById("div2").innerHTML;
+            // console.log(div3);
+
+            document.getElementById("div3").innerText = "<p>This is a new container...</p>";
+
+            let divCollection = document.getElementsByTagName("div");
+            console.log(divCollection.length);
+            for(let i = 0; i < divCollection.length; i++) {
+                console.log(divCollection[i].innerHTML);
+            }
+        }
+    </script>
+    
+</body>
+</html>
