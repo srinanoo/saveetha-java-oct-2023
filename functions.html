@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // function testFunc(param1=0, param2=0) {
+        //     /// code statement lines
+        //     // let add = 2+2;
+        //     // return add;
+        //     console.log(param1);
+        //     console.log(param2);
+        // }
+        // testFunc(); // 1st scenario
+        // testFunc(10);
+        // testFunc(10, 30); // 2nd scenario
+
+        // let a = 10;
+        // console.log(a);
+        // let testFunc1 = function() {
+        //     console.log("Anonymous");
+        // }
+        // testFunc1();
+
+        // function testFunc3(param1) {
+        //     return "This is my function : " + param1;
+        // }
+        // let result = testFunc3(10);
+        // console.log(result);
+
+        // // testFunc3 = function() {
+        // //     console.log("Function...");
+        // // }
+    
+        // let testFunc4 = param1 => "Arrow Function :" + param1;
+        // let result1 = testFunc4(10);
+        // console.log(result1);
+
+        // let arr = ["a", "b", "c", "d", "e", "f"];
+        // for(let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+
+        // for(let i in arr) {
+        //     console.log(arr[i]);
+        // }
+
+        // for(let i of arr) {
+        //     console.log(i);
+        // }
+
+        // arr.forEach(processArray);
+        // function processArray(value) {
+        //     console.log(value);
+        // }
+
+        // let processArray1 = (value) => {
+        //     console.log(value);
+        // }
+        // arr.forEach(processArray1);
+
+        // arr.forEach(value => console.log(value));
+
+        // let arr = [1, 2, 3, 4, 5, 6];
+        // let result = [];
+        // arr.forEach(v => result.push(Math.sqrt(v)));
+        // console.log(result);
+
+        // let result1 = arr.map(v => Math.sqrt(v));
+        // console.log(result1);
+
+        // let namesOfPeople = ["Arun", "Akila", "Chandar", "Gopal", "Shivani", "Poorna", "Gopi", "Singh"];
+        // let delimiter = "A";
+
+        // for(let temp of namesOfPeople) {
+        //     if(temp[0] == delimiter) {
+        //         console.log(temp);
+        //     };
+        // }
+
+        // let result = namesOfPeople.filter(v => v[0]==delimiter);
+        // console.log(result);
+
+        let arr= [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let count = 0;
+        for(let i in arr) {
+            count += arr[i];
+        }
+        console.log(count);
+
+        let result = arr.reduce((inv, v) => inv + v)/arr.length;
+        console.log("Sum: " + result);
+        // console.log("Avg: " + result/arr.length);
+     
+    </script>
+    
+</body>
+</html>
