@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        console.log(1);
+        // function process() {
+        //     let temp = new Promise((resolve, reject) => {
+        //         let x = 10;
+        //         (x === 10) ? resolve('Yes, its resolved')
+        //         : reject("NO, it has failed!");
+        //     });
+        //     temp.then(
+        //         function(result) { console.log(result); },
+        //         function(failed) { console.log(failed); }
+        //     )
+        // }
+        // process();
+
+        function process() {
+            return new Promise((resolve, reject) => {
+                let x = 10;
+                (x === 10) 
+                    ? resolve('Yes, its resolved')
+                    : reject("NO, it has failed!");
+            });
+        }
+        async function testFunc() {
+            let temp = await process();
+            console.log(temp);
+
+            console.log(3);
+        }
+        testFunc();
+    </script>
+    
+</body>
+</html>

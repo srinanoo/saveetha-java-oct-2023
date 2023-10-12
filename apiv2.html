@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex > div {
+            width: 33.33333333%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="universities">
+        
+    </div>
+
+    <button id="btnShow">Show Details</button>
+
+    <script>
+        document.getElementById("btnShow").addEventListener("click", async () => {
+            let data = await fetch('http://universities.hipolabs.com/search?country=India');
+            let result = await data.json();
+            console.log(result);
+            let output = '<div class="flex">';
+            for(let i=0; i<result.length; i++) {
+                output += `<div><p>Name: ${result[i].name}</p><p>Website: ${result[i].domains[0]}</p></div>`;
+            }
+            output += '</div>';
+
+            document.getElementById("universities").innerHTML = output;
+        })
+    </script>
+    
+</body>
+</html>

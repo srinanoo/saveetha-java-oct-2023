@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="fact"></div>
+    <button id="btnFact">Show Fact</button>
+
+    <script>
+        document.getElementById("btnFact").addEventListener("click", async () => {
+            fetch("https://catfact.ninja/fact")
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    console.log(data.fact);
+                    let p1 = document.createElement("p");
+                    p1.innerHTML = data.fact;
+
+                    document.querySelector("#fact").append(p1);
+                    console.log(data.length);
+                } );
+
+            let res = await fetch("https://catfact.ninja/fact");
+            let data = await res.json();
+            console.log(data)
+            console.log(data.fact);
+            console.log(data.length);
+
+            console.log( 1 + 2 );
+        });
+    </script>
+    
+</body>
+</html>
